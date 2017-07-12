@@ -10,7 +10,7 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 </head>
 <body>
 
-<form method="get" action="file.php">
+<form method="get" action="">
 <label>Instructor Number</label>
 <input type="text" name="instructorNumber" />
 <br />
