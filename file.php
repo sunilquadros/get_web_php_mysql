@@ -73,13 +73,13 @@ if ($result->num_rows > 0) {
          $postalCode = $row["postalCode"];
          $country = $row["country"];
      echo "  <div style='margin:30px 0px;'>
-      Name: $instructorNumber<br />
-      Email: $instructorName<br />
-      Website: $email<br />
-      Comment: $city<br />
-      Comment: $state<br />
-      Comment: $postalCode<br />
-      Timestamp: $country
+      Instructor Number: $instructorNumber<br />
+      Instructor Name: $instructorName<br />
+      Email Address: $email<br />
+      City: $city<br />
+      State: $state<br />
+      Zip Code: $postalCode<br />
+      Country: $country
     </div>
     ";
     
