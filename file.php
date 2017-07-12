@@ -81,6 +81,7 @@ if ($result->num_rows > 0) {
       Comment: $postalCode<br />
       Timestamp: $country
     </div>
+    ";
     
 //          echo "InNum:- " . $row["instructorNumber"]. " " ;
 //          echo "InName:- " . $row["instructorName"]. " " ;
