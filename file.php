@@ -49,13 +49,13 @@ echo "Connected successfully";
 // *********** Temporarily commenting out this portion of code *********
 
 // create a variable
-$instructorNumber=$GET['instructorNumber'];
-$instructorName=$_GET['instructorName'];
-$email=$_GET['email'];
-$city=$_GET['city'];
-$state=$_GET['state'];
-$postalCode=$_GET['postalCode'];
-$country=$_GET['country'];
+// $instructorNumber=$GET['instructorNumber'];
+// $instructorName=$_GET['instructorName'];
+// $email=$_GET['email'];
+// $city=$_GET['city'];
+// $state=$_GET['state'];
+// $postalCode=$_GET['postalCode'];
+// $country=$_GET['country'];
 
 $sql = "SELECT instructorNumber, instructorName, email, city, state, postalCode, country
     from instructors";
@@ -65,6 +65,23 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
+         $instructorNumber = $row["instructorNumber"];
+         $instructorName = $row["instructorName"];
+         $email = $row["email"];
+         $city = $row["city"];
+         $state = $row["state"];
+         $postalCode = $row["postalCode"];
+         $country = $row["country"];
+     echo "  <div style='margin:30px 0px;'>
+      Name: $instructorNumber<br />
+      Email: $instructorName<br />
+      Website: $email<br />
+      Comment: $city<br />
+      Comment: $state<br />
+      Comment: $postalCode<br />
+      Timestamp: $country
+    </div>
+    
 //          echo "InNum:- " . $row["instructorNumber"]. " " ;
 //          echo "InName:- " . $row["instructorName"]. " " ;
 //          echo "Email:- " . $row["email"]. " " ;
@@ -72,7 +89,7 @@ if ($result->num_rows > 0) {
 //          echo "State:- " .  $row["state"]. " " ;
  //         echo "PostalCode:- " . $row["postalCode"]. " " ;
 //          echo "Country:- " . $row["country"]. " " ;
-            echo "InNum:- " . $row["instructorNumber"]. " " ;
+//            echo "InNum:- " . $row["instructorNumber"]. " " ;
 //        echo " \n";
    }
  } else {
